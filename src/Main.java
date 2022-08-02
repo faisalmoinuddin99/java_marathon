@@ -4,10 +4,10 @@ class Point {
     private int x ;
     private int y ;
 
-    // parameterized constructor
-    public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
+    // modified constructor
+    Point(int a, int b){
+        x = a ;
+        y = b ;
     }
 
     public void displayPoints(){
