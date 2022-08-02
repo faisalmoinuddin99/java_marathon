@@ -1,49 +1,23 @@
-class Shape {
 
-    // To implement the concept of encapsulation  make all the data member as private
-   private String name ;
-   private int length ;
-   private int breadth ;
+class Point {
 
-    public String getName() {
-        return name;
+    private int x ;
+    private int y ;
+
+    // parameterized constructor
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    public int getBreadth() {
-        return breadth;
-    }
-
-    public void setBreadth(int breadth) {
-        this.breadth = breadth;
+    public void displayPoints(){
+        System.out.println("x: "+ x + " y: " + y);
     }
 }
-class  Rectangle extends Shape {
 
-
-    int area(int length, int breadth) {
-        return  length * breadth ;
-    }
-}
 public class Main {
     public static void main(String[] args) {
-
-        Rectangle r1 = new Rectangle() ;
-        r1.setLength(10) ;
-        r1.setBreadth(20) ;
-//        r1.name = "rectangle" ;
-        int areaOfRectangle = r1.area(r1.getLength(),r1.getBreadth()) ;
-        System.out.println(areaOfRectangle); // 200
+        Point p1 = new Point(10, 20) ;
+        p1.displayPoints(); // x: 10 y: 20
     }
 }
