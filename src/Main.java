@@ -1,5 +1,6 @@
 class Shape {
 
+    // To implement the concept of encapsulation  make all the data member as private
    private String name ;
    private int length ;
    private int breadth ;
@@ -30,6 +31,7 @@ class Shape {
 }
 class  Rectangle extends Shape {
 
+
     int area(int length, int breadth) {
         return  length * breadth ;
     }
@@ -40,6 +42,7 @@ public class Main {
         Rectangle r1 = new Rectangle() ;
         r1.setLength(10) ;
         r1.setBreadth(20) ;
+//        r1.name = "rectangle" ;
         int areaOfRectangle = r1.area(r1.getLength(),r1.getBreadth()) ;
         System.out.println(areaOfRectangle); // 200
     }
